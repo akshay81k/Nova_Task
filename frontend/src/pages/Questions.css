@@ -1,0 +1,187 @@
+/* General card styling for questions and answers */
+.question-card,
+.answer-card {
+  background: #1e1e2f;
+  color: #fff;
+  padding: 1.5rem;
+  border-radius: 1rem;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  margin-bottom: 1rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.question-card:hover,
+.answer-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 24px rgba(123, 47, 247, 0.5);
+}
+
+/* Buttons */
+.form-btn {
+  background: linear-gradient(90deg, #7b2ff7, #ff6ec7);
+  color: #fff;
+  font-weight: bold;
+  padding: 0.7rem 1rem;
+  border: none;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.form-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(123, 47, 247, 0.5);
+}
+
+/* Vote buttons */
+.vote-btn {
+  border: none;
+  border-radius: 0.5rem;
+  padding: 0.4rem 0.6rem;
+  margin-right: 0.5rem;
+  font-size: 0.85rem;
+  cursor: pointer;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  transition: all 0.2s;
+}
+
+.vote-btn.up {
+  background: #2a2a40;
+  color: #4caf50;
+}
+
+.vote-btn.up:hover:not(.disabled) {
+  box-shadow: 0 0 10px #4caf50;
+  transform: translateY(-2px);
+}
+
+.vote-btn.down {
+  background: #2a2a40;
+  color: #f44336;
+}
+
+.vote-btn.down:hover:not(.disabled) {
+  box-shadow: 0 0 10px #f44336;
+  transform: translateY(-2px);
+}
+
+.vote-btn.disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  box-shadow: none !important;
+  transform: none !important;
+}
+
+/* Containers */
+.qdetail-container,
+.questions-container {
+  padding: 2rem;
+  max-width: 800px;
+  margin: auto;
+}
+
+.qdetail-title,
+.questions-heading {
+  font-size: 1.8rem;
+  font-weight: bold;
+  margin-bottom: 1rem;
+  color: #fff;
+}
+
+.qdetail-body,
+.question-card p,
+.answer-card p {
+  margin-bottom: 0.8rem;
+  color: #ccc;
+}
+
+.divider {
+  border: 0;
+  height: 1px;
+  background: #333;
+  margin: 1rem 0;
+}
+
+/* Answer Form */
+.answer-form textarea,
+.question-form textarea,
+.question-form input {
+  width: 100%;
+  padding: 0.6rem 0.8rem;
+  border-radius: 0.5rem;
+  border: 1px solid #444;
+  background: #2a2a40;
+  color: #fff;
+  resize: vertical;
+  transition: all 0.3s;
+}
+
+.answer-form textarea:focus,
+.question-form textarea:focus,
+.question-form input:focus {
+  border-color: #ff6ec7;
+  outline: none;
+  box-shadow: 0 0 6px rgba(255, 110, 199, 0.5);
+}
+
+/* Answers Section */
+.answers-heading {
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  color: #fff;
+}
+
+.no-answers,
+.no-questions {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Back button */
+.back-btn {
+  background: transparent;
+  border: none;
+  color: #ff6ec7;
+  font-weight: bold;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.3rem;
+  cursor: pointer;
+  margin-bottom: 1rem;
+  transition: transform 0.2s;
+}
+
+.back-btn:hover {
+  transform: translateX(-3px);
+}
+
+/* Question meta */
+.question-meta,
+.answer-meta,
+.question-stats {
+  font-size: 0.8rem;
+  color: #aaa;
+  margin-top: 0.5rem;
+}
+
+/* Animation for cards (optional) */
+@keyframes fadeInUp {
+  from {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+.question-card,
+.answer-card {
+  animation: fadeInUp 0.5s ease-out;
+}
